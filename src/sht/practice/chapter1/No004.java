@@ -30,7 +30,15 @@ public class No004 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
+		String name = request.getParameter("bigger");
+
+		String name1 = name.toUpperCase();
+
+		out.println("<html><head><title>Result</title></head><body>");
+		out.println("<h1>Done</h1>" + name1);
+		out.println("</body></html>");
 	}
 
 }

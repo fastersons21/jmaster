@@ -1,4 +1,4 @@
-package sht.practice.chapter1;
+package sht.practice.chapter4;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,26 +10,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class No001
+ * Servlet implementation class no001
  */
-@WebServlet("/No001")
-public class No001 extends HttpServlet {
+@WebServlet("/no001")
+public class no001 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public No001() {
+    public no001() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
@@ -40,10 +39,9 @@ public class No001 extends HttpServlet {
 		int i1 = Integer.parseInt(num1);
 		int i2 = Integer.parseInt(num2);
 		int i3 = Integer.parseInt(num3);
-		int answer = i1 + i2 + i3;
-
-		out.println("<html><head><title>No001</title></head><body>");
-		out.println("<h1>Hello Servlet Get!</h1>");
+		int answer = i1 * i2 * i3;
+		out.println("<html><head><title>計算</title></head><body>");
+		out.println(num1 + "×" + num2 + "×" + num3 + "=" + answer);
 		out.println("</body></html>");
 	}
 
