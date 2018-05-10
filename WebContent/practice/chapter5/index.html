@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>会員ログイン</title>
+</head>
+<body>
+	<form action="/jmaster/AuthServlet" method="post">
+		ユーザー名：<input type = "text" name = "name" /><br/>
+		パスワード：<input type="password" name = "pw" /><br/>
+		<input type = "hidden" name = "action" value = "login"/>
+		<input type = "submit" value ="ログイン" />
+	</form>
+
+	<hr />
+	商品を選択してください。<br/><br/>
+
+	<a href ="/jmaster/AddBookServlet?product_no=100">火花</a><br/>
+	<a href ="/jmaster/AddBookServlet?product_no=101">何者</a><br/>
+	<a href ="/jmaster/AddBookServlet?product_no=102">Dive</a><br/>
+	<br/>
+	<br/>
+
+	<a href ="/jmaster/AuthServlet?action=logout">ログアウト</a>
+	<br/>
+
+</body>
+</html>

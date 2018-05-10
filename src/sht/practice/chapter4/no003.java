@@ -36,6 +36,7 @@ public class no003 extends HttpServlet {
 		String mail = request.getParameter("userEadress");
 
 		out.println("<html><head><title>登録確認</title></head><body>");
+		out.println("<h1>登録確認</h1>");
 		out.println(name + "<br/>" + pass + "<br/>" + mail);
 		out.println("</body></html>");
 	}
